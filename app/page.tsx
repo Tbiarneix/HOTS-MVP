@@ -48,7 +48,7 @@ function calculateMVP(playerStats: PlayerStats, gameLength: number) {
 
   mvpScore += playerStats.kills;
   mvpScore += playerStats.assists;
-  mvpScore += (playerStats.timeSpentDead / gameLengthInSeconds) * 100 * -0.5;
+  mvpScore += ((playerStats.timeSpentDead * 60) / gameLengthInSeconds) * 100 * -0.5;
   
   if (playerStats.topHeroDamageTeam) mvpScore += 1;
   if (playerStats.topHeroDamageMatch) mvpScore += 1;
